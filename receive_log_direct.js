@@ -1,0 +1,33 @@
+var amqp = require('amqplib/callback_api')
+
+var args = process.argv.slice(2)
+
+if (args.length == 0) {
+  console.log("Usage: receive_log_direct.js [info] [warning] [error]")
+  process.exit(0)
+}
+
+amqp.connect('amqp://rabbit:D66z3qm3ynC3@35.186.149.9', function (err, conn) {
+  if (err) {
+    console.log('da co loi: ', err);
+    return;
+  }
+
+  conn.createChannel(function (err, ch) {
+    var ex = 'direct_logs'
+
+    ch.assertExchange(ex, 'direct', { durable: false })
+    ch.assertQueue('', { exclusive: true }, function (err, q) {
+      console.log(" [*] Waiting for messages in %s. To exit press CTRL+C", q.queue);
+      args.forEach(severity => {
+        ch.bindQueue(q.queue, ex, severity)
+      })
+
+      ch.consume(q.queue, function (msg) {
+        console.log("[x] Received %s %s", msg.fields.routingKey, msg.content.toString())
+      }, { noAck: true })
+    })
+
+
+  })
+})
