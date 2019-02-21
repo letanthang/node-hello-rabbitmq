@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/letanthang/.nvm/versions/node/v8.11.1/bin/node /usr/local/Cellar/yarn/1.12.1/libexec/bin/yarn.js add qmqplib
+
+PATH: 
+  /Users/letanthang/Downloads/google-cloud-sdk/bin:/Users/letanthang/GoWorks/bin:/Users/letanthang/.gvm/pkgsets/go1.9/global/bin:/Users/letanthang/.gvm/gos/go1.9/bin:/Users/letanthang/.gvm/pkgsets/go1.9/global/overlay/bin:/Users/letanthang/.gvm/bin:/Users/letanthang/.gvm/bin:/Users/letanthang/.nvm/versions/node/v8.11.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/letanthang/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/letanthang/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:/Users/letanthang/.antigen/bundles/zsh-users/zsh-autosuggestions:/Users/letanthang/Library/Android/sdk/emulator:/Users/letanthang/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.12.1
+
+Node version: 
+  8.11.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/qmqplib: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.12.1/libexec/lib/cli.js:63139:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.12.1/libexec/lib/cli.js:124547:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.12.1/libexec/lib/cli.js:125519:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.12.1/libexec/lib/cli.js:125441:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
